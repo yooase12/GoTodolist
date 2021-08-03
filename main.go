@@ -8,7 +8,7 @@ import (
 )
 
 func dbInit() (*gorm.DB, error) {
-	user := os.Getenv("DBUSER")
+	user := os.Getenv("DBUSER")dd
 	pass := os.Getenv("DBPASS")
 	dsn := fmt.Sprintf("%s:%s%s", user, pass, "@tcp(127.0.0.1:3306)/todolist?charset=utf8&parseTime=True&loc=Local")
 	return gorm.Open(mysql.Open(dsn), &gorm.Config{})
